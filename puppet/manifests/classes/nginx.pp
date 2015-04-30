@@ -11,4 +11,14 @@ class nginx {
        hasstatus => true,
     }
 
+    file { "/etc/nginx/nginx.conf":
+        source => "puppet://etc/nginx/nginx.conf",
+        ensure => file,
+        owner => root,
+        group => root,
+        mode => 644,
+        notify => service["nginx"],
+        require => service["nginx"],
+    }
+
 }
