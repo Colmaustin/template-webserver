@@ -12,13 +12,12 @@ class nginx {
     }
 
     file { "/etc/nginx/nginx.conf":
-        source => "puppet://etc/nginx/nginx.conf",
+        source => "puppet:///modules/helloworld/etc/nginx/nginx.conf",
         ensure => file,
         owner => root,
         group => root,
         mode => 644,
         notify => service["nginx"],
-        require => service["nginx"],
     }
 
 }
