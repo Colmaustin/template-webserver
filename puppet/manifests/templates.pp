@@ -1,5 +1,5 @@
 class helloworld {
 
-    include php5-fpm;
+    include php5-fpm
 
 }
