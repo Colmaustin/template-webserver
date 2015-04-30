@@ -11,8 +11,8 @@ server {
 		try_files $uri $uri/ index.html;
 	}
 
-        access_log /var/log/nginx/helloworld-access.log
-        error_log  /var/log/nginx/helloword-error.log
+        access_log /var/log/nginx/helloworld-access.log main;
+        error_log  /var/log/nginx/helloword-error.log;
 
 	error_page 404 /404.html;
 
