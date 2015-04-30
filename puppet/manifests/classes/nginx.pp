@@ -20,4 +20,13 @@ class nginx {
         notify => service["nginx"],
     }
 
+    file { "/etc/nginx/sites-availabe/default":
+        source => "puppet:///modules/helloworld/etc/nginx/sites-available/default",
+        ensure => file,
+        owner => root,
+        group => root,
+        mode => 644,
+        notify => service["nginx"],
+    }
+
 }
